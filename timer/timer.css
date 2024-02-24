@@ -6,9 +6,8 @@ html{
 }
 
 body{
-    
     background-color:#D1F8FF;
-    
+    font-family: "Itim", cursive;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -19,7 +18,7 @@ body{
 
 #timer-title{
     font-family: "Itim", cursive;
-    font-size: 50px;
+    font-size: 500%;
     color:#516a9c;  
     margin-bottom:1%;
     
@@ -69,12 +68,16 @@ body{
     border-style:solid;
 
     margin-right:2vw;
+    padding-left:1vw;
+    padding-right:1.5vw;
     margin-left:5vw;
-    margin-bottom:2vw;
+    padding-bottom: 8.5%;
+    margin-bottom:3vw;
 
     background-color:rgb(251, 248, 241);
     border-radius: 20px;
     width:40vw;
+    height:15vw;
     text-align: center;
 
     font-size: 15vw;
@@ -120,4 +123,31 @@ body{
     display:flex;
     flex-direction: column;
     align-items:end;
+}
+
+.addBtn {
+    font-family: 'Itim', sans-serif;
+    text-align:center;
+    font-size:100%;
+    background-color: #BCDFE5;
+}
+
+.addBtn:hover {
+    background-color: #e6fbff;
+    cursor:pointer;
+}
+
+.tasks {
+    position:relative;
+    color:#516a9c;
+    margin-top:-8%;
+    text-align:left;
+    font-size: 100%;
+}
+
+#taskTitle {
+    font-family: "Itim", sans-serif;
+    color:#516a9c;
+    text-align:center;
+    font-size:250%;
 }

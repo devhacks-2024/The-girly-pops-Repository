@@ -32,9 +32,17 @@
             <img src="/timer_images/restart.png" id = "reset" class = "buttons" onmouseover= "this.src='/timer_images/restart_hover.png'" onmouseout = "this.src = '/timer_images/restart.png'">
         </div>
         
-        <div id = "task-title">Tasks</div>
+        <div class="tasks">
+            <div id="taskTitle">Tasks:</div>
+            <script src="taskList.js"></script>
+            <form>
+                <input type="text" placeholder="Task Name" id="taskName" name="taskName" required>
+                <button onclick=addTask() class="addBtn">Add Task</button>
+            </form>
+            <ul id="taskList">
 
-        <input type="text" id="input" placeholder="Enter new task">
+            </ul>
+        </div>
 
         
         
