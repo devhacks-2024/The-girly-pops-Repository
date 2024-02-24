@@ -12,8 +12,6 @@ var beingAdded = false;
 
 function readCookies() {
     let cookieString = document.cookie;
-    
-    window.alert(cookieString);
 
     let cards = cookieString.split("^");
     for(i = 1; i < cards.length; i++) {
@@ -68,7 +66,6 @@ function nextCard() {
             currCard = 0;
         }
         side = true;
-        var text = document.getElementById("text");
         setFront(currCard);
     }
 }
@@ -78,7 +75,7 @@ function randomizeOrder() {
         var frontSwap;
         var backSwap;
         for(i = numCards-1; i > 0; i--) {
-            let swapIndex = Math.floor(Math.random() * (i-1))
+            let swapIndex = Math.floor(Math.random() * i)
             frontSwap = cardFronts[swapIndex];
             backSwap = cardBacks[swapIndex];
             cardFronts[swapIndex] = cardFronts[i];
@@ -88,6 +85,8 @@ function randomizeOrder() {
         }
         setFront(0);
         currCard = 0;
+
+        setCookies();
     }
 }
 
