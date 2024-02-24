@@ -1,15 +1,12 @@
-:root{
-    --gradient: linear-gradient{
-        180deg, rgba(45,112,1253, 0.73) 0%,
-        #163e92 100%
 
-    }
+html{
+    width:100%;
+    height:100%;
 }
 body{
-    background: var(--gradient);
-
-    /*background-color: rgb(209, 248, 255);
-    */
+    
+    background-color:#D1F8FF;
+    
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -18,6 +15,12 @@ body{
 
 }
 
+#timer-title{
+    font-family: "Itim", cursive;
+    font-size: 50px;
+    color:#516a9c;  
+    margin-bottom:10px;
+}
 #task-title{
     font-family: "Itim", cursive;
     margin-bottom:20px;
@@ -51,27 +54,46 @@ body{
     align-items: center;
 }
 #timer-display{
-    color: lightblue;
-    margin: 0%;
+    color: #516a9c;
+    border-color:#516a9c;
+    border-width: 5px;
+    border-style:solid;
+
+    margin-right:20px;
+    margin-left:60px;
+    margin-bottom:20px;
+    background-color:rgb(251, 248, 241);
+    border-radius: 20px;
+    width:500px;
+    text-align: center;
+
     /*text-align: center;*/
     font-size: 15vw;
 }
-.buttons{
-    color:aqua;
+.arrows{
     display:flex;
     flex-direction: column;
+    justify-content: center;
     background-color: transparent;
+    width:20px;
+    height:20px;
+    
+    
     /*border-color: transparent;*/
     /*position: absolute;
     left: 80%;
     top:30%;*/
 }
-.button{
-    background-color: rgba(255, 251, 239, 1);
-   
-    color: aqua;
+.arrow{
+    margin-bottom:5px;
+    margin-top: 5px
     /* background-color:transparent;
     border-color: transparent; */
+}
+
+.buttons{
+    width:40px;
+    height:40px;
 }
 
 .buttonbox
@@ -82,11 +104,13 @@ body{
     
 }
 
-#start,#reset
+#reset
 {
-    margin-left:10px;
-    margin-right:10px;
+    margin-left:30px;
+   
 }
+
+
 /*
 #start{
     width: 10vw;
@@ -107,9 +131,9 @@ body{
     
     width: 10vw;
     height: 5vw;
-    /*
     position: absolute;
     left:45%;
-    */
+    top:50%;
+    
     display:none;
 }
