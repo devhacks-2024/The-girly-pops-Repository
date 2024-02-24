@@ -38,12 +38,6 @@ body{
     
 }
 
-.homebtnbox{
-    display:flex;
-    justify-content:end;
-    width:100%;
-}
-
 .timer{
     display: flex;
     flex-direction: row;

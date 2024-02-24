@@ -64,5 +64,10 @@ button:hover {
 }
 
 .homebtn {
-    width: 100px;
+    width:100px;
+    height:100px;
+    
+    position: absolute;
+    left:90%;
+    top:83%;
 }
