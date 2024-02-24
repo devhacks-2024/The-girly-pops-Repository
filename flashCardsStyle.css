@@ -50,8 +50,8 @@ main {
 
     background-color: white;
     margin: auto;
-    width: 70%;
-    height: 70%;
+    width: 80vw;
+    height: 30vw;
     border: 2px solid #C7E2D2;
     border-radius: 10px;
     padding: 20px;
@@ -159,5 +159,28 @@ textarea {
 }
 .btn:hover {
     background-color: #C7E2D2;
+}
+
+.cat{
+    width:6vw;
+    height:6vw; 
+    display:flex;
+    align-self:center;
+}
+
+.cat-align{
+    display:flex;
+    flex-direction: column;
+    align-content:center;
+
+}
+
+.catspace{
+    display:flex;
+    justify-content:space-around;
+}
+
+#sizer{
+    color:#E0FFEC;
 }
 
