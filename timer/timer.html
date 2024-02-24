@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href = "timer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class = "timer">
@@ -13,10 +16,19 @@
             </div>
         </div>
         <div class = "toggle-buttons">
-            <button id = "start">start</button>
-            <button id = "reset">reset</button>
-            <button id = "pause">pause</button>
-        </div>
+            <div class = "buttonbox">
+
+                <button id = "start">start</button>
+                <button id = "reset">reset</button>
+            </div>
+                <button id = "pause">pause</button>
+        </div>  
+        <div id = "task-title">Tasks</div>
+
+        <input type="text" id="input" placeholder="Enter new task">
+
+        <div class = "homebtnbox"></div>
+        <a href="/home.html" ><img src = "/timer_images/home_unhovered_logo.png" alt = "home logo" class = "homebtn" onmouseover="this.src='/timer_images/home_hovered_logo.png'" onmouseout = "this.src='/timer_images/home_unhovered_logo.png'"></a>
         <script src="timer.js"></script>
     </body>
 </html>

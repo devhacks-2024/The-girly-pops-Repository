@@ -1,3 +1,49 @@
+:root{
+    --gradient: linear-gradient{
+        180deg, rgba(45,112,1253, 0.73) 0%,
+        #163e92 100%
+
+    }
+}
+body{
+    background: var(--gradient);
+
+    /*background-color: rgb(209, 248, 255);
+    */
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+    height:100%;
+
+}
+
+#task-title{
+    font-family: "Itim", cursive;
+    margin-bottom:20px;
+}
+
+#input{
+    border-color: lightblue;
+    background-color:rgba(255, 251, 239, 1);
+}
+.homebtn{
+    
+    width:100px;
+    height:100px;
+    
+    position: absolute;
+    left:88%;
+    top:75%;
+    
+}
+
+.homebtnbox{
+    display:flex;
+    justify-content:end;
+    width:100%;
+}
+
 .timer{
     display: flex;
     flex-direction: row;
@@ -8,7 +54,7 @@
     color: lightblue;
     margin: 0%;
     /*text-align: center;*/
-    font-size: 20vw;
+    font-size: 15vw;
 }
 .buttons{
     color:aqua;
@@ -21,11 +67,27 @@
     top:30%;*/
 }
 .button{
+    background-color: rgba(255, 251, 239, 1);
+   
     color: aqua;
     /* background-color:transparent;
     border-color: transparent; */
 }
 
+.buttonbox
+{
+    display:flex;
+    justify-content:center; 
+    margin-bottom: 100px;
+    
+}
+
+#start,#reset
+{
+    margin-left:10px;
+    margin-right:10px;
+}
+/*
 #start{
     width: 10vw;
     height: 5vw;
@@ -39,11 +101,15 @@
     position: absolute;
     left:50%;
 }
+*/
 
 #pause{
+    
     width: 10vw;
     height: 5vw;
+    /*
     position: absolute;
     left:45%;
+    */
     display:none;
 }
