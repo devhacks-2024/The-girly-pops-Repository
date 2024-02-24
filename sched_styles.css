@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+html{
+    font-family: "Item", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.title{
+    background-color: paleturquoise;
+    text-align: center;
+}
+
+#left, #middle, #right{
+    width: 70%;
+    border: 10px;
+    border-radius: 50px;
+    padding: 1%;
+    margin: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.flex-sched{
+    display: flex;
+    flex-direction: row;
+    flex: 50%;
+    align-items: center;
+}
+
+.wrapper{
+    display: grid;
+    place-items: center;
+}
+
+@media (max-width: 700px) {
+    .flex-sched{
+        flex: 100%;
+        flex-direction: column;
+        #list1,#list2,#list3,#list4,#list5,#list6 {
+            width: 325px;
+            height: auto;
+        }
+    }
+    .title{
+        width: auto;
+    }
+}
