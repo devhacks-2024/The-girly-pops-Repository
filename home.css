@@ -1,0 +1,50 @@
+body
+{
+    background-color: rgba(255, 251, 239, 1);
+
+}
+
+
+.title
+{
+    display:flex;
+    justify-content:center;
+    font-family: "Itim", cursive;
+    font-size:xx-large;
+}
+.all_logos
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    
+   
+}
+
+.logo_group
+{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.logo
+{
+    display:flex;
+    justify-content: center;
+    width:200px;
+    height:200px;
+    margin-bottom:10px;
+    border-radius: 13px;
+}
+
+
+.logo_title
+{
+    display:flex;
+    justify-content: center;
+    font-family: "Itim", cursive;
+}
