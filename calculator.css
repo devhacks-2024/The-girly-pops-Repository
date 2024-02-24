@@ -42,7 +42,7 @@ button {
     font-family: 'Itim', sans-serif;
     font-size: 18px;
     display: block;
-    width: 51.5%;
+    width: 45%;
     padding: 10px;
     background-color: #d4a6d5;
     color: black;
@@ -50,6 +50,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     margin: 45px auto 0;
+    margin-top: 100px;
     margin-bottom: 15px;
 }
 
@@ -60,4 +61,8 @@ button:hover {
 #result {
     font-weight: bold;
     text-align: center;
+}
+
+.homebtn {
+    width: 100px;
 }
