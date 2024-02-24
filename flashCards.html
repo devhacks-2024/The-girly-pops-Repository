@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flash Cards</title>
+        <link rel="stylesheet" href="flashCardsStyle.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+        <script src="flashCards.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Flash Cards</h1>
+        </header>
+
+        <main>
+            <div id="text" class="card"></div>
+            
+            
+            <div class="buttons">
+                <button class="btn" onclick ="flipCard()">Flip Card</button>
+                <button class="btn" onclick ="nextCard()">Next Card</button>
+                <button class="btn" onclick ="randomizeOrder()">Randomize Order</button>
+                <button class="btn" onclick ="openPopup()">Add Card</button>
+                <button class="btn" onclick ="removeCard()">Remove Card</button>
+            </div>
+
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup" id="popup">
+                    <div class="popup-content">
+                        <label for="front"><b>Card Front</b></label>
+                        <br>
+                        <textarea id="front" rows="2" cols="45" wrap="soft" maxlength="1173"></textarea>
+                        <br>
+                        <label for="back"><b>Card Back</b></label>
+                        <br>
+                        <textarea id="back" rows="13" cols="45" wrap="soft" maxlength="1173"></textarea>
+                        <br>
+                        <button class="btn" onclick="closePopup()">Create!</button>
+                    </div>
+                </div>            
+            </div>
+
+        </main>
+   </body>
+</html>
