@@ -24,6 +24,7 @@ body{
     margin-bottom:1%;
     
 }
+
 #task-title{
     font-family: "Itim", cursive;
     margin-bottom:20px;
@@ -34,15 +35,10 @@ body{
     background-color:rgba(255, 251, 239, 1);
 }
 
-
 .homebtn{
     display:flex;
     width:5vw;
     height:5vw;
-    
-    /* position: absolute;
-    left:95%;
-    top:15%; */
     
 }
 
@@ -57,8 +53,6 @@ body{
     display:flex;
     align-items:center;
     justify-content: space-between;
-    
-
 }
 
 .timer{
@@ -67,6 +61,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 #timer-display{
     color: #516a9c;
     border-color:#516a9c;
@@ -91,25 +86,17 @@ body{
     background-color: transparent;
     width:3vw;
     height:3vw;
-    
-    
-    /*border-color: transparent;*/
-    /*position: absolute;
-    left: 80%;
-    top:30%;*/
 }
+
 .arrow{
     margin-bottom:5px;
     margin-top: 5px
-    /* background-color:transparent;
-    border-color: transparent; */
 }
 
 .buttons{
     width:5vw;
     height:5vw;
 }
-
 
 .buttonbox
 {
@@ -118,29 +105,10 @@ body{
     margin-bottom: 10vw;
 }
 
-
-/*
-#start{
-    width: 10vw;
-    height: 5vw;
-    position:absolute;
-    left:35%;
-}
-
-#reset{
-    width: 10vw;
-    height: 5vw;
-    position: absolute;
-    left:50%;
-}
-*/
-
 #pause{
     
     display:none;
 }
-
-
 
 .cat {
     width:20%;
