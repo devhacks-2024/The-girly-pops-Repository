@@ -26,6 +26,8 @@ body {
 
 #box{
     color:#FFE8FD;
+    width:5vw;
+    height:5vw;
 }
 #calc-title{
     text-align: center;
