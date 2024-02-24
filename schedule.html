@@ -4,17 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <title>My Schedule</title>
-    <link rel="stylesheet" href="sched_styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 </head>
 <header>
     
 </header>
 <body>
     <div class="wrapper" style="margin-top: 10%;">
+        <div class="container">
+            <div id="addTask">
+                <label for="taskdays" style="margin-inline-end: 1%;">Completion: </label>
+                <select name="taskdays" id="taskdays" style="margin-inline-end: 2%;">
+                    <option value="week">This week</option>
+                    <option value="monday">Monday</option>
+                    <option value="tuesday">Tuesday</option>
+                    <option value="wednesday">Wednesday</option>
+                    <option value="thursday">Thursday</option>
+                    <option value="friday">Friday</option>
+                    <option value="saturday">Saturday</option>
+                    <option value="sunday">Sunday</option>
+                </select>
+                <input type="text" placeholder="add task">
+                <span onclick="newTask()" class="addButton">Add</span>
+            </div>
+        </div>
         <div class="flex-sched" id = "wmt">
             <div class="day" id="week">
                 <div class="dayName" id="weekName">
-                    <h1>THIS WEEK</h1>
+                    <h2>THIS WEEK</h2>
+                    <hr>
                 </div>
                 testing how the list will look
                 <ul>
@@ -23,13 +42,15 @@
             </div>
             <div class="day" id="mon">
                 <div class="dayName" id="monName">
-                    <h1>MONDAY</h1>
+                    <h2>MONDAY</h2>
+                    <hr>
                 </div>
             </div>
 
             <div class="day" id="tues">
                 <div class="dayName" id="tuesName">
-                    <h1>TUESDAY</h1>
+                    <h2>TUESDAY</h2>
+                    <hr>
                 </div>
             </div>
         </div>
@@ -37,19 +58,23 @@
     <div class="wrapper">
         <div class="flex-sched" id = "wtf">
             <div class="day" id="wed">
+                
                 <div class="dayName" id="wedName">
-                    <h1>WEDNESDAY</h1>
+                    <h2>WEDNESDAY</h2>
+                    <hr>
                 </div>
             </div>
             <div class="day" id="thurs">
                 <div class="dayName" id="thursName">
-                    <h1>THURSDAY</h1>
+                    <h2>THURSDAY</h2>
+                    <hr>
                 </div>
 
             </div>
             <div class="day" id="fri">
                 <div class="dayName" id="friName">
-                    <h1>FRIDAY</h1>
+                    <h2>FRIDAY</h2>
+                    <hr>
                 </div>
             </div>
         </div>
@@ -58,12 +83,14 @@
         <div class="flex-sched" id = "ss">
             <div class="day" id="sat">
                 <div class="dayName" id="satName">
-                    <h1>SATURDAY</h1>
+                    <h2>SATURDAY</h2>
+                    <hr>
                 </div>
             </div>
             <div class="day" id="week">
                 <div class="dayName" id="sunName">
-                    <h1>SUNDAY</h1>
+                    <h2>SUNDAY</h2>
+                    <hr>
                 </div>
             </div>
         </div>

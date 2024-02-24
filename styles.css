@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
 
 html {
     font-family: "Item", cursive;
@@ -6,6 +6,20 @@ html {
     font-style: normal;
 
     background-color: #FFFBEF;
+}
+ul {
+    margin: 0;
+    padding:0;
+}
+.container{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    min-width: 600px;
+    min-height:50px;
+    align-items: center;
+    position: relative;
+    justify-content: center;
 }
 
 .day {
@@ -61,6 +75,10 @@ html {
     background-color: #fde0e0;
 }
 
+hr {
+    border: .5px solid grey;
+    border-radius: 2px;
+}
 #week {
     background-color: #e0f0e3;
 }
@@ -73,8 +91,11 @@ html {
 
 
 
-h1 {
+h2 {
     text-align: center;
+    margin:0px;
+    margin-bottom: 5px;
+    padding: 0px;
 }
 
 .flex-sched {
@@ -87,9 +108,11 @@ h1 {
 
 .wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: auto;
+    width: 100%;
+    position: relative;
 }
 
 
