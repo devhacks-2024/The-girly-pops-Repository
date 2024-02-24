@@ -12,9 +12,25 @@ body {
     border-radius: 5px;
 }
 
-h1 {
+
+.title{
+    display:flex;
+    justify-content:space-between;
+}
+
+.homebtn {
+    width:5vw;
+    height:5vw;
+
+}
+
+#box{
+    color:#FFE8FD;
+}
+#calc-title{
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 10vw;
+    font-size:300%
 }
 
 form {
@@ -63,11 +79,5 @@ button:hover {
     text-align: center;
 }
 
-.homebtn {
-    width:100px;
-    height:100px;
-    
-    position: absolute;
-    left:90%;
-    top:83%;
-}
+
+
