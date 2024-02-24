@@ -1,49 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 
-html{
+html {
     font-family: "Item", cursive;
     font-weight: 400;
     font-style: normal;
-}
-.title{
-    background-color: paleturquoise;
-    text-align: center;
+
+    background-color: #FFFBEF;
 }
 
-#left, #middle, #right{
-    width: 70%;
+.day {
+    width: 300px;
     border: 10px;
-    border-radius: 50px;
-    padding: 1%;
-    margin: 30px;
+    border-radius: 5px;
+
+
+    padding: 3%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-inline: 15px;
+    
+
+    align-items: top;
+
+    background-color: #FFFFFF;
+    min-height: fit-content;
+    min-width: 200px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 25%);
+
+    max-width: 250px;
+
+    position: top;
+
 }
+
+#mon {
+    background-color: #D1F8FF;
+}
+
+#tues {
+    background-color: #FAEDCD;
+}
+
+#wed {
+    background-color: #C9E4DE;
+}
+
+#thurs {
+    background-color: #DBCDF0;
+}
+
+#fri {
+    background-color: #F3C6DE;
+}
+
+#sat {
+    background-color: #F7D9C4;
+}
+
+#sun {
+    background-color: #fde0e0;
+}
+
+#week {
+    background-color: #e0f0e3;
+}
+
+
+.dayName {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
 
 h1 {
     text-align: center;
 }
 
-.flex-sched{
+.flex-sched {
     display: flex;
     flex-direction: row;
     flex: 50%;
     align-items: center;
+    justify-content: center;
 }
 
-.wrapper{
-    display: grid;
-    place-items: center;
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
 }
 
-@media (max-width: 700px) {
-    .flex-sched{
+
+@media (max-width: 850px) {
+    .flex-sched {
         flex: 100%;
         flex-direction: column;
-        #list1,#list2,#list3,#list4,#list5,#list6 {
-            width: 325px;
-            height: auto;
-        }
     }
-    .title{
-        width: auto;
+
+    .day{
+        min-width: 400px;
+        max-width: 800px;
     }
 }
+
