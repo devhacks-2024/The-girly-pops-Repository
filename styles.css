@@ -4,26 +4,132 @@ html {
     font-family: "Item", cursive;
     font-weight: 400;
     font-style: normal;
-
     background-color: #FFFBEF;
 }
-ul {
-    margin: 0;
-    padding:0;
+
+#title {
+    width: 95%;
+    max-width: 750px;
+    text-align: center;
+    background-color: #f0eafaa2;
+    
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 25%);
+    border: 10px solid;
+    border-color: #cbbce3;
+    border-radius: 10px;
+    height: fit-content;
+    margin-bottom: 20px;
 }
+
+
+.list{
+    box-sizing: border-box;
+}
+ul {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding-right: 50px;
+    font-size:18px;
+    transition-duration: 0.2s;
+    user-select: none;
+}
+.sunTask ul li:nth-child(odd) {
+    background-color: #cbe6d0;
+}
+
+.monTask ul li:nth-child(odd) {
+    background-color: #c0e7ee;
+}
+
+.tuesTask ul li:nth-child(odd) {
+    background-color: #ede0bf;
+}
+
+.wedTask ul li:nth-child(odd) {
+    background-color: #b7dad2;
+}
+
+.thursTask ul li:nth-child(odd) {
+    background-color: #cbbce3;
+}
+
+.friTask ul li:nth-child(odd) {
+    background-color: #e9b3d0;
+}
+
+.satTask ul li:nth-child(odd) {
+    background-color: #eecab0;
+}
+
+.weekTask ul li:nth-child(odd) {
+    background-color: #f4c8c8;
+}
+
+
+.sunTask ul li:hover {
+    background-color: #acd4b4;
+}
+
+.monTask ul li:hover {
+    background-color: #acd8e0;
+}
+
+.tuesTask ul li:hover {
+    background-color: #ddcfaa;
+}
+
+.wedTask ul li:hover {
+    background-color: #aad5cb;
+}
+
+.thursTask ul li:hover {
+    background-color: #beadda;
+}
+
+.friTask ul li:hover {
+    background-color: #dda5c3;
+}
+
+.satTask ul li:hover {
+    background-color: #e1bca2;
+}
+
+.weekTask ul li:hover {
+    background-color: #ecbcbc;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+}
+
 .container{
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: row;
-    min-width: 600px;
-    min-height:50px;
+    background-color: rgb(236, 249, 222);
+    min-width: 425px;
+    width: 95%;
     align-items: center;
     position: relative;
     justify-content: center;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 25%);
+    border-radius: 10px;
+    padding:10px;
+    color: rgb(87, 87, 87);
+    max-width: 750px;
+
 }
 
+
 .day {
-    width: 300px;
+    width: 30%;
     border: 10px;
     border-radius: 5px;
 
@@ -41,10 +147,13 @@ ul {
     min-width: 200px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 25%);
 
-    max-width: 250px;
+    max-width: 300px;
+
+    
 
     position: top;
 
+    transition-duration: .5s;
 }
 
 #mon {
@@ -72,15 +181,18 @@ ul {
 }
 
 #sun {
+    background-color: #e0f0e3;
+}
+
+#week {
     background-color: #fde0e0;
 }
+
+
 
 hr {
     border: .5px solid grey;
     border-radius: 2px;
-}
-#week {
-    background-color: #e0f0e3;
 }
 
 
@@ -104,6 +216,7 @@ h2 {
     flex: 50%;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .wrapper {
@@ -115,8 +228,40 @@ h2 {
     position: relative;
 }
 
+button{
+    user-select: none;
+}
 
-@media (max-width: 850px) {
+.addButton {
+    border: 2px solid #98c0a7;
+    color: rgb(85, 85, 85);
+    background-color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font: "Itim", cursive;
+
+    transition-duration: 0.4s;
+
+}
+
+.addButton:hover
+{
+    background-color: #98c0a7;
+    color: white;
+    border-radius: 10px;
+}
+
+.day:hover{
+    box-shadow: none;
+}
+
+
+@media (max-width: 800px) {
     .flex-sched {
         flex: 100%;
         flex-direction: column;
