@@ -92,7 +92,7 @@ function randomizeOrder() {
 
 function openPopup() {
     if(!beingAdded) {
-        document.getElementById("popupOverlay").style.display = "block";
+        document.getElementById("popupOverlay").style.display = "flex";
         beingAdded = true;
     }
 }
