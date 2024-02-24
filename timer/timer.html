@@ -8,32 +8,36 @@
         <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id = "timer-title">Study Timer</div>
+        <div class = top>
+            <div id = "box">x</div>
+            <div id = "timer-title">Study Timer</div>
+            <a href="/home.html" class = "homebtn"  ><img src = "/timer_images/home_unhovered_logo.png" alt = "home logo" onmouseover="this.src='/timer_images/home_hovered_logo.png'" onmouseout = "this.src='/timer_images/home_unhovered_logo.png'"></a>
+        </div>
         <div class ="cat-timer">
             <img src="/animated gifs/cat peek.gif" class="cat">
             <div class = "timer">
                 <div id = "timer-display">00:00</div>
                 <div class = "arrows">
-                    <img src = "/timer_images/up_arrow.png"  class = "arrow" id = "up">
-                    <img src = "/timer_images/down_arrow.png" class = "arrow" id = "down">
+                    <img src = "/timer_images/up_arrow.png"  class = "arrow" id = "up" onmouseover= "this.src='/timer_images/up_arrow_hover.png'" onmouseout = "this.src = '/timer_images/up_arrow.png'">
+                    <img src = "/timer_images/down_arrow.png" class = "arrow" id = "down" onmouseover= "this.src='/timer_images/down_arrow_hover.png'" onmouseout = "this.src = '/timer_images/down_arrow.png'">
                 </div>
             </div>   
         </div>
             
-        <div class = "toggle-buttons">
-            <div class = "buttonbox">
+        
+        <div class = "buttonbox">
 
-                <img src = "/timer_images/play_button.png" id = "start" class = "buttons">
-                <img src="/timer_images/restart.png" id = "reset" class = "buttons">
-            </div>
-                <img src = "/timer_images/pause.png" id = "pause" class = "buttons">
-        </div>  
+            <img src = "/timer_images/play_button.png" id = "start" class = "buttons" onmouseover= "this.src='/timer_images/play_button_hover.png'" onmouseout = "this.src = '/timer_images/play_button.png'">
+            <img src = "/timer_images/pause.png" id = "pause" class = "buttons"onmouseover= "this.src='/timer_images/pause_hover.png'" onmouseout = "this.src = '/timer_images/pause.png'">
+            <img src="/timer_images/restart.png" id = "reset" class = "buttons" onmouseover= "this.src='/timer_images/restart_hover.png'" onmouseout = "this.src = '/timer_images/restart.png'">
+        </div>
+        
         <div id = "task-title">Tasks</div>
 
         <input type="text" id="input" placeholder="Enter new task">
 
-        <div class = "homebtnbox"></div>
-        <a href="/home.html" ><img src = "/timer_images/home_unhovered_logo.png" alt = "home logo" class = "homebtn" onmouseover="this.src='/timer_images/home_hovered_logo.png'" onmouseout = "this.src='/timer_images/home_unhovered_logo.png'"></a>
+        
+        
         <script src="timer.js"></script>
         
     </body>

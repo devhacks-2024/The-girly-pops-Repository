@@ -33,10 +33,12 @@ function updateTimerDisplay() {
 startButton.addEventListener("click",function(){
     countdown = true;
     upButton.style.display = "none";
+    
     downButton.style.display = "none";
     startButton.style.display = "none";
     resetButton.style.display = "none"; 
     pauseButton.style.display = "block";
+
     countdownInterval = setInterval(function(){
         if(num>0){
             num =num-1;
