@@ -25,7 +25,12 @@
       <label for="desiredGrade">Desired Final Grade (%):</label>
       <input type="number" id="desiredGrade" step="0.01" required>
     </div>
-    <button type="button" onclick="calculateGrade()">Calculate</button>
+
+    <div class = "seal-placer">
+        <img src="/animated gifs/sleeping_seal.gif" class="seal">
+
+        <button type="button" onclick="calculateGrade()">Calculate</button>
+    </div>
   </form>
   <span id="errorMessage" style="color: red; display: block; text-align: center;"></span>
   <div id="result"></div>

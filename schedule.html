@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Schedule</title>
+    <link rel="stylesheet" href="schedule.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<header>
+    <div class="wrapper">
+        <div id="title">
+            <h1>This week's To-Do 📌</h1>
+
+        </div>
+    </div>
+</header>
+
+<body onload="readCookies()">
+    <div class="wrapper" style="margin-top: 15px;">
+        <div class = "header">
+        <img src="/animated gifs/bear.gif" class="bear">
+        <div class="container">
+           
+                    
+            <div id="addTask">
+                <label for="taskdays" style="margin-inline-end: 1%;">Completion: </label>
+                <select name="taskdays" id="taskdays" style="margin-inline-end: 2%;">
+                    <option value="week">This week</option>
+                    <option value="monday">Monday</option>
+                    <option value="tuesday">Tuesday</option>
+                    <option value="wednesday">Wednesday</option>
+                    <option value="thursday">Thursday</option>
+                    <option value="friday">Friday</option>
+                    <option value="saturday">Saturday</option>
+                    <option value="sunday">Sunday</option>
+                </select>
+                <input type="text" id="userItem" autocomplete="off" placeholder="add task">
+                <button onclick="newListItem()" class="addButton">Add</button>
+            </div>
+           
+        </div>
+        <a href="home.html"><img src = "/home_images/home_unhovered_logo_for_schedule.png" alt = "home logo" class = "homebtn" onmouseover="this.src='/home_images/home_hovered_logo_for_schedule.png'" onmouseout = "this.src='/home_images/home_unhovered_logo_for_schedule.png'"></a>
+        </div>
+        <div class="flex-sched" id="wmt">
+            <div class="day" id="week">
+                <div class="dayName" id="weekName">
+                    <h2>THIS WEEK</h2>
+                    <hr>
+                </div>
+                <div class="list weekTask">
+                    <ul id="weekTasks">
+                    </ul>
+                </div>
+            </div>
+            <div class="day" id="mon">
+                <div class="dayName" id="monName">
+                    <h2>MONDAY</h2>
+                    <hr>
+                    <div class="list monTask">
+                        <ul id="monTasks">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day" id="tues">
+                <div class="dayName" id="tuesName">
+                    <h2>TUESDAY</h2>
+                    <hr>
+                    <div class="list tuesTask">
+                        <ul id="tuesTasks">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="flex-sched" id="wtf">
+            <div class="day" id="wed">
+
+                <div class="dayName" id="wedName">
+                    <h2>WEDNESDAY</h2>
+                    <hr>
+                    <div class="list wedTask">
+                        <ul id="wedTasks">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="day" id="thurs">
+                <div class="dayName" id="thursName">
+                    <h2>THURSDAY</h2>
+                    <hr>
+                    <div class="list thursTask">
+                        <ul id="thursTasks">
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="day" id="fri">
+                <div class="dayName" id="friName">
+                    <h2>FRIDAY</h2>
+                    <hr>
+                    <div class="list friTask">
+                        <ul id="friTasks">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="flex-sched" id="ss">
+            <div class="day" id="sat">
+                <div class="dayName" id="satName">
+                    <h2>SATURDAY</h2>
+                    <hr>
+                    <div class="list satTask">
+                        <ul id="satTasks">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="day" id="sun">
+                <div class="dayName" id="sunName">
+                    <h2>SUNDAY</h2>
+                    <hr>
+                    <div class="list sunTask">
+                        <ul id="sunTasks">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="schedule.js"></script>
+</body>
+
+</html>

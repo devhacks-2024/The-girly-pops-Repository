@@ -7,14 +7,22 @@
         <script src="flashCards.js"></script>
     </head>
     <body onload="readCookies()">
-        <header>
-            <h1>Flash Cards</h1>
-        </header>
-
+        
+            <div class = "title">
+                <div id = "box">b</div>
+                <h1 class = "header">Flash Cards</h1>
+               
+                <a href="/home.html"><img src = "/timer_images/home_unhovered_logo.png" onmouseover="this.src='/timer_images/home_hovered_logo.png'" onmouseout = "this.src='/timer_images/home_unhovered_logo.png'" class="homebtn"></a>
+            </div>
+            
         <main>
-            <div id="text" class="card"></div>
-            
-            
+            <div class = "cat-and-text">
+                <div class = "catspace">
+                    <div id="sizer">b</div>
+                    <img src="/animated gifs/walking_cat.gif" class="cat">
+                </div>
+                <div id="text" class="card"></div>
+            </div>
             <div class="buttons">
                 <button class="btn" onclick ="flipCard()">Flip Card</button>
                 <button class="btn" onclick ="nextCard()">Next Card</button>
@@ -22,7 +30,7 @@
                 <button class="btn" onclick ="openPopup()">Add Card</button>
                 <button class="btn" onclick ="removeCard()">Remove Card</button>
             </div>
-
+            
             <div class="popup-overlay" id="popupOverlay">
                 <div class="popup" id="popup">
                     <div class="popup-content">
@@ -34,13 +42,13 @@
                         <br>
                         <textarea id="back" rows="13" cols="45" wrap="soft" maxlength="1173"></textarea>
                         <br>
-                        <button class="btn" onclick="closePopup()">Create!</button>
+                        <button id = "createbtn"onclick="closePopup()">Create!</button>
                     </div>
                 </div>            
             </div>
 
         </main>
-        <a href="/home.html"><img src = "/timer_images/home_unhovered_logo.png" onmouseover="this.src='/timer_images/home_hovered_logo.png'" onmouseout = "this.src='/timer_images/home_unhovered_logo.png'" class="homebtn"></a>
+       
         <script src="timer.js"></script>
    </body>
 </html>

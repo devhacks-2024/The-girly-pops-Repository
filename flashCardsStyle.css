@@ -21,12 +21,28 @@ main {
     height: 87%;
 }
 
-header {
+.header {
     font-family: Itim;
     text-align: center;
     line-height: 70px;
-    margin: 10px;
-    font-size: 30px;
+    margin: 1vw;
+    font-size: 4vw;
+}
+
+.title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+#box{
+    color:#E0FFEC;
+}
+
+.homebtn {
+    width: 5vw;    
+    height: 5vw;
+    margin-right:1vw;
 }
 
 
@@ -34,8 +50,8 @@ header {
 
     background-color: white;
     margin: auto;
-    width: 70%;
-    height: 70%;
+    width: 80vw;
+    height: 30vw;
     border: 2px solid #C7E2D2;
     border-radius: 10px;
     padding: 20px;
@@ -86,11 +102,14 @@ textarea {
 
 .buttons {
     /* border: 1px solid black; */
-    margin: auto;
+    display:flex;
+    justify-content:center;
+    margin-top:2vw;
+   
     /* width: 1118px; */
-    width: 75%;
+    /* width: 75%; */
     /* height: 150px; */
-    height: 25%;
+    /* height: 25%; */
     line-height: 150px;
 }
 
@@ -101,9 +120,10 @@ textarea {
     width: 15%;
     /* height: 75px; */
     height: 50%;
-    padding: 10px 5px;
+    padding: 2vw 1vw; 
+
     /* margin: 10px 10px; */
-    margin: 2.35%;
+    margin: 1%;
     border: 2px solid #C7E2D2;
     border-radius: 10px;
     
@@ -117,13 +137,50 @@ textarea {
 
 }
 
+#createbtn{
+    background-color: #E0FFEC;
+
+    padding:1vw 3vw;
+    margin: 1%;
+    border: 2px solid #C7E2D2;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    text-align: center;
+    font-family: Itim;
+    font-size: 20px;
+    color: black;
+}
+
+#createbtn:hover{
+    background-color: #C7E2D2;
+}
 .btn:hover {
     background-color: #C7E2D2;
 }
 
-.homebtn {
-    width: 7%;    
-    position: absolute;
-    left:90.5%;
-    top:80%;
+.cat{
+    width:8vw;
+    height:8vw; 
+    display:flex;
+    align-self:center;
 }
+
+.cat-align{
+    display:flex;
+    flex-direction: column;
+    align-content:center;
+
+}
+
+.catspace{
+    display:flex;
+    justify-content:space-around;
+}
+
+#sizer{
+    color:#E0FFEC;
+}
+
