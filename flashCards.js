@@ -1,29 +1,39 @@
-var numCards = 5;
-
-//true is front, false is back
-var side = true;
+//flash cards information
+var numCards = 0;
 var currCard = 0;
-var beingAdded = false;
-
 var cardFronts = [];
 var cardBacks = [];
 
-// var longFront = "";
-// for(i = 0; i < 272; i++) {
-//     longFront += "0";
-// }
-// var longBack = ""
-// for(i = 0; i < 1173; i++) {
-//     longBack += "0";
-// }
-// cardFronts[0] = longFront;
-// cardBacks[0] = longBack;
+//true is front, false is back
+var side = true;
+//trach if a new card is being added and disables other functions
+var beingAdded = false;
 
-// //acutally initialize the arrays
-// for(i = 0; i < 5; i++) {
-//     cardFronts[i] = "Front " + i;
-//     cardBacks[i] = "Back " + i;
-// }
+
+function readCookies() {
+    let cookieString = document.cookie;
+    
+    window.alert(cookieString);
+
+    let cards = cookieString.split("^");
+    for(i = 1; i < cards.length; i++) {
+        let sides = cards[i].split("+");
+        cardFronts[numCards] = sides[0];
+        cardBacks[numCards] = sides[1];
+        numCards++;
+    }
+    if(numCards > 0) {
+        setFront(0);
+    }
+}
+
+function setCookies() {
+    let cookieString = "cards=";
+    for(i = 0; i < numCards; i++) {
+        cookieString += "^" + cardFronts[i] + "+" + cardBacks[i];
+    }
+    document.cookie = cookieString;
+}
 
 function setFront(cardNum) {
     const text = document.getElementById("text");
@@ -35,7 +45,7 @@ function setFront(cardNum) {
 }
 
 function flipCard() {
-    if(!beingAdded) {
+    if(numCards > 0 && !beingAdded) {
         const text = document.getElementById("text");
         const element = document.querySelector('.card');
         if(side) {
@@ -51,7 +61,7 @@ function flipCard() {
 }
 
 function nextCard() {
-    if(!beingAdded) {
+    if(numCards > 0 && !beingAdded) {
         if(currCard < numCards - 1) {
             currCard++;
         } else {
@@ -64,7 +74,7 @@ function nextCard() {
 }
 
 function randomizeOrder() {
-    if(!beingAdded) {
+    if(numCards > 0 && !beingAdded) {
         var frontSwap;
         var backSwap;
         for(i = numCards-1; i > 0; i--) {
@@ -92,6 +102,8 @@ function closePopup() {
     let newFront = document.getElementById("front");
     let newBack = document.getElementById("back");
     addCard(newFront.value, newBack.value);
+    newFront.value = "";
+    newBack.value = "";
     document.getElementById("popupOverlay").style.display = "none";
     beingAdded = false;
 }
@@ -99,15 +111,18 @@ function closePopup() {
 function addCard(newFront, newBack) {
     const MAX_LENGTH = 1173;
 
-    if(newFront != null && newBack != null && newFront.length < MAX_LENGTH && newBack.length < MAX_LENGTH) {
+    if(newFront != null && newBack != null && newFront != "" && newFront != "" && newFront.length < MAX_LENGTH && newBack.length < MAX_LENGTH) {
         cardFronts[numCards] = newFront;
         cardBacks[numCards] = newBack;
         numCards++;
+        setCookies();
+        setFront(numCards - 1);
+        currCard = numCards - 1;
     }
 }
 
 function removeCard() {
-    if(!beingAdded) {
+    if(numCards > 0 && !beingAdded) {
         for(i = currCard; i < numCards - 1; i++) {
             cardFronts[i] = cardFronts[i + 1];
             cardBacks[i] = cardBacks[i + 1];
@@ -128,5 +143,6 @@ function removeCard() {
         } else {
             setFront(currCard);
         }
+        setCookies();
     }
 }
