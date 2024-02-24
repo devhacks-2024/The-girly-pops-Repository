@@ -4,6 +4,7 @@
         <title>Flash Cards</title>
         <link rel="stylesheet" href="flashCardsStyle.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+        <script src="flashCards.js"></script>
     </head>
     <body>
         <header>
@@ -11,130 +12,33 @@
         </header>
 
         <main>
-            <div id="text" class="card">Initial Text</div>
+            <div id="text" class="card"></div>
+            
             
             <div class="buttons">
-                <!-- <button class="btn" onclick ="testLongString()">TLS</button> -->
-
                 <button class="btn" onclick ="flipCard()">Flip Card</button>
                 <button class="btn" onclick ="nextCard()">Next Card</button>
                 <button class="btn" onclick ="randomizeOrder()">Randomize Order</button>
-                <button class="btn" onclick ="addCard()">Add Card</button>
+                <button class="btn" onclick ="openPopup()">Add Card</button>
                 <button class="btn" onclick ="removeCard()">Remove Card</button>
-                                
             </div>
-            
+
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup" id="popup">
+                    <div class="popup-content">
+                        <label for="front"><b>Card Front</b></label>
+                        <br>
+                        <textarea id="front" rows="2" cols="45" wrap="soft" maxlength="1173"></textarea>
+                        <br>
+                        <label for="back"><b>Card Back</b></label>
+                        <br>
+                        <textarea id="back" rows="13" cols="45" wrap="soft" maxlength="1173"></textarea>
+                        <br>
+                        <button class="btn" onclick="closePopup()">Create!</button>
+                    </div>
+                </div>            
+            </div>
 
         </main>
    </body>
 </html>
-
-<script>
-    var numCards = 5;
-
-    //true is front, false is back
-    var side = true;
-    var currCard = 0;
-
-    var cardFronts = [];
-    var cardBacks = [];
-
-    //acutally initialize the arrays
-    for(i = 0; i < 5; i++) {
-        cardFronts[i] = "Front " + i;
-        cardBacks[i] = "Back " + i;
-    }
-
-    function testLongString() {
-        let longString = "";
-        for(i = 0; i < 1173; i++) {
-            longString += "0";
-        }
-        let text = document.getElementById("text");
-        text.innerHTML = longString;
-
-    }
-
-    function setFront(cardNum) {
-        const text = document.getElementById("text");
-        const element = document.querySelector('.card');
-        text.innerHTML = cardFronts[currCard];
-        element.style.textAlign = 'center';
-    }
-
-    function flipCard() {
-        const text = document.getElementById("text");
-        const element = document.querySelector('.card');
-        if(side) {
-            text.innerHTML = cardBacks[currCard];
-            element.style.textAlign = 'left';
-        } else {
-            text.innerHTML = cardFronts[currCard];
-            element.style.textAlign = 'center';
-        }
-        side = !side;
-    }
-
-    function nextCard() {
-        if(currCard < numCards - 1) {
-            currCard++;
-        } else {
-            currCard = 0;
-        }
-        side = true;
-        var text = document.getElementById("text");
-        setFront(currCard);
-    }
-
-    function randomizeOrder() {
-        var frontSwap;
-        var backSwap;
-        for(i = numCards-1; i > 0; i--) {
-            let swapIndex = Math.floor(Math.random() * (i-1))
-            frontSwap = cardFronts[swapIndex];
-            backSwap = cardBacks[swapIndex];
-            cardFronts[swapIndex] = cardFronts[i];
-            cardBacks[swapIndex] = cardBacks[i];
-            cardFronts[i] = frontSwap;
-            cardBacks[i] = backSwap;
-        }
-        setFront(0);
-    }
-
-    function addCard() {
-        const MAX_LENGTH = 1173;
-
-        let newFront = prompt("Enter a new card front");
-        let newBack = prompt("Enter a new card back");
-
-        if(newFront != null && newBack != null && newFront.length < MAX_LENGTH && newBack.length < MAX_LENGTH) {
-            cardFronts[numCards] = newFront;
-            cardBacks[numCards] = newBack;
-            numCards++;
-        }
-    }
-
-    function removeCard() {
-        for(i = currCard; i < numCards - 1; i++) {
-            cardFronts[i] = cardFronts[i + 1];
-            cardBacks[i] = cardBacks[i + 1];
-        }
-        numCards--;
-
-        let text = document.getElementById("text");
-        //last card was deleted
-        if(numCards === 0) {
-            cardFronts[0] = "";
-            cardBacks[0] = "";
-            text.innerHTML = "";
-            currCard = 0;
-        //card being deleted was the last one
-        } else if(currCard === numCards) {
-            setFront(0)
-            currCard = 0;
-        } else {
-            text.innerHTML = cardFronts[currCard];
-        }
-    }
-
-</script>

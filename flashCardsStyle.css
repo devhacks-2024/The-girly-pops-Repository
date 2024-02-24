@@ -18,6 +18,7 @@ header {
 }
 
 .card {
+
     background-color: white;
     margin: auto;
     width: 900px;
@@ -26,12 +27,42 @@ header {
     border-radius: 10px;
     padding: 20px;
     
-    /* line-height: 100px; */
     font-family: Itim;
-    font-size: 20px;
-    text-align: left;
+    font-size: 40px;
+    line-height: 51px;
+    text-align: center;
     color: black;
     word-wrap: break-word;
+}
+
+.popup-overlay {
+    display: none;
+    margin: auto;
+    width: 504px;
+    height: 0px;
+    background-color: #E0FFEC;
+    /* border: 1px solid #E0FFEC; */
+}
+
+.popup {
+    width: 500px;
+    height: 450px;
+    padding: 10px;
+    margin-top: -600px;
+    background-color: #E0FFEC;
+    border-radius: 10px;
+    border: 2px solid #C7E2D2;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+    font-family: Itim;
+    font-size: 20px;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+textarea {
+    font-family: Itim;
 }
 
 /* button {
