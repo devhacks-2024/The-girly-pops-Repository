@@ -9,7 +9,6 @@ html {
 
 #title {
     width: 95%;
-    max-width: 750px;
     text-align: center;
     background-color: #f0eafaa2;
     
@@ -18,7 +17,7 @@ html {
     border-color: #cbbce3;
     border-radius: 10px;
     height: fit-content;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 
@@ -35,6 +34,9 @@ ul li {
     cursor: pointer;
     position: relative;
     padding-right: 50px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size:18px;
     transition-duration: 0.2s;
     user-select: none;
