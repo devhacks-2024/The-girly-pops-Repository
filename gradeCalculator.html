@@ -6,8 +6,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
   <link rel="stylesheet" href="calculator.css">
 </head>
+  <div class = "title">
+    <div id = "box">b</div>
+    <div id = "calc-title">Final Exam Grade Calculator</div>    
+    <a href="home.html"><img src = "/calculator images/home unhovered logo.png" alt = "home logo" class = "homebtn" onmouseover="this.src='/calculator images/home hovered logo.png'" onmouseout = "this.src='/calculator images/home unhovered logo.png'"></a>
+  </div>
 
-  <h1>Final Exam Grade Calculator</h1>
   <form id="gradeCalculatorForm">
     <div>
       <label for="currentGrade">Current Grade (%):</label>
@@ -26,9 +30,7 @@
   <span id="errorMessage" style="color: red; display: block; text-align: center;"></span>
   <div id="result"></div>
   <script src="calculator.js"></script>
-  <a href="home.html">
-    <img src = "/calculator images/home unhovered logo.png" alt = "home logo" class = "homebtn" onmouseover="this.src='/calculator images/home hovered logo.png'" onmouseout = "this.src='/calculator images/home unhovered logo.png'">
-  </a>
+  
 </body>
 
 </html>
