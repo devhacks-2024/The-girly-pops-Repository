@@ -1,8 +1,10 @@
 
 html{
+    display:flex;
     width:100%;
     height:100%;
 }
+
 body{
     
     background-color:#D1F8FF;
@@ -19,8 +21,10 @@ body{
     font-family: "Itim", cursive;
     font-size: 50px;
     color:#516a9c;  
-    margin-bottom:10px;
+    margin-bottom:1%;
+    
 }
+
 #task-title{
     font-family: "Itim", cursive;
     margin-bottom:20px;
@@ -30,15 +34,25 @@ body{
     border-color: lightblue;
     background-color:rgba(255, 251, 239, 1);
 }
+
 .homebtn{
+    display:flex;
+    width:5vw;
+    height:5vw;
     
-    width:100px;
-    height:100px;
-    
-    position: absolute;
-    left:88%;
-    top:75%;
-    
+}
+
+#box{
+    color:#D1F8FF;
+    width:5vw;
+    height:5vw;
+}
+
+.top{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
 }
 
 .timer{
@@ -47,21 +61,22 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 #timer-display{
     color: #516a9c;
     border-color:#516a9c;
     border-width: 5px;
     border-style:solid;
 
-    margin-right:20px;
-    margin-left:60px;
-    margin-bottom:20px;
+    margin-right:2vw;
+    margin-left:5vw;
+    margin-bottom:2vw;
+
     background-color:rgb(251, 248, 241);
     border-radius: 20px;
-    width:500px;
+    width:40vw;
     text-align: center;
 
-    /*text-align: center;*/
     font-size: 15vw;
 }
 .arrows{
@@ -69,65 +84,40 @@ body{
     flex-direction: column;
     justify-content: center;
     background-color: transparent;
-    width:20px;
-    height:20px;
-    
-    
-    /*border-color: transparent;*/
-    /*position: absolute;
-    left: 80%;
-    top:30%;*/
+    width:3vw;
+    height:3vw;
 }
+
 .arrow{
     margin-bottom:5px;
     margin-top: 5px
-    /* background-color:transparent;
-    border-color: transparent; */
 }
 
 .buttons{
-    width:40px;
-    height:40px;
+    width:5vw;
+    height:5vw;
 }
 
 .buttonbox
 {
     display:flex;
     justify-content:center; 
-    margin-bottom: 100px;
-    
+    margin-bottom: 10vw;
 }
-
-#reset
-{
-    margin-left:30px;
-   
-}
-
-
-/*
-#start{
-    width: 10vw;
-    height: 5vw;
-    position:absolute;
-    left:35%;
-}
-
-#reset{
-    width: 10vw;
-    height: 5vw;
-    position: absolute;
-    left:50%;
-}
-*/
 
 #pause{
     
-    width: 10vw;
-    height: 5vw;
-    position: absolute;
-    left:45%;
-    top:50%;
-    
     display:none;
+}
+
+.cat {
+    width:20%;
+    margin-right:5vw;
+    
+}
+
+.cat-timer{
+    display:flex;
+    flex-direction: column;
+    align-items:end;
 }
