@@ -89,7 +89,9 @@ function openPopup() {
 }
 
 function closePopup() {
-    addCard(document.getElementById("front").value, document.getElementById("back").value);
+    let newFront = document.getElementById("front");
+    let newBack = document.getElementById("back");
+    addCard(newFront.value, newBack.value);
     document.getElementById("popupOverlay").style.display = "none";
     beingAdded = false;
 }
