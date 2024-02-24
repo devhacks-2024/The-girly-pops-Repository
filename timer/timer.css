@@ -53,15 +53,15 @@ body{
     border-width: 5px;
     border-style:solid;
 
-    margin-right:20px;
-    margin-left:60px;
-    margin-bottom:20px;
+    margin-right:2vw;
+    margin-left:5vw;
+    margin-bottom:2vw;
+
     background-color:rgb(251, 248, 241);
     border-radius: 20px;
-    width:500px;
+    width:40vw;
     text-align: center;
 
-    /*text-align: center;*/
     font-size: 15vw;
 }
 .arrows{
@@ -130,4 +130,11 @@ body{
     top:50%;
     
     display:none;
+}
+
+.cat {
+    width:10%;
+    position:absolute;
+    left:60%;
+    top:-10%;
 }

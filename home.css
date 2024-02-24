@@ -4,13 +4,20 @@ body
 
 }
 
+html {
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
 
 .title
 {
     display:flex;
     justify-content:center;
     font-family: "Itim", cursive;
-    font-size:xx-large;
+    font-size:500%;
 }
 .all_logos
 {
