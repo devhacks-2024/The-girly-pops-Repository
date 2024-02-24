@@ -20,6 +20,21 @@ html {
     margin-bottom: 5px;
 }
 
+.header{
+    display:flex;
+    width:100%;
+    justify-content:space-evenly;
+}
+
+.homebtn{
+    width:6vw;
+    height:6vw;
+}
+
+.bear{
+        width:6vw;
+        height:6vw;
+}
 
 .list{
     box-sizing: border-box;
@@ -112,8 +127,8 @@ ul li.checked {
 
 .container{
     background-color: rgb(236, 249, 222);
-    min-width: 425px;
-    width: 95%;
+   
+    width: 58vw;
     align-items: center;
     position: relative;
     justify-content: center;

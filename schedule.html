@@ -9,19 +9,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
 </head>
 <header>
     <div class="wrapper">
         <div id="title">
             <h1>This week's To-Do 📌</h1>
+
         </div>
     </div>
 </header>
 
 <body onload="readCookies()">
     <div class="wrapper" style="margin-top: 15px;">
+        <div class = "header">
+        <img src="/animated gifs/bear.gif" class="bear">
         <div class="container">
+           
+                    
             <div id="addTask">
                 <label for="taskdays" style="margin-inline-end: 1%;">Completion: </label>
                 <select name="taskdays" id="taskdays" style="margin-inline-end: 2%;">
@@ -37,6 +42,9 @@
                 <input type="text" id="userItem" autocomplete="off" placeholder="add task">
                 <button onclick="newListItem()" class="addButton">Add</button>
             </div>
+           
+        </div>
+        <a href="home.html"><img src = "/calculator images/home unhovered logo.png" alt = "home logo" class = "homebtn" onmouseover="this.src='/calculator images/home hovered logo.png'" onmouseout = "this.src='/calculator images/home unhovered logo.png'"></a>
         </div>
         <div class="flex-sched" id="wmt">
             <div class="day" id="week">
