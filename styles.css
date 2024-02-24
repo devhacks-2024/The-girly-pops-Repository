@@ -1,0 +1,63 @@
+body {
+    font-family: 'Itim', sans-serif;
+    background-color: #FFE8FD;
+    color: black;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    display: block;
+}
+
+button {
+    font-family: 'Itim', sans-serif;
+    font-size: 18px;
+    display: block;
+    width: 51.5%;
+    padding: 10px;
+    background-color: #d4a6d5;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 45px auto 0;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #a27da2;
+}
+
+#result {
+    font-weight: bold;
+    text-align: center;
+}
